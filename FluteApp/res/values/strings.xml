@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FluteApp</string>
+    <string name="example">Блокфлейта строй С</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="exit">Выход</string>
+    <string name="editor">Редактор</string>
+    <string name="tuner">Тюнер</string>
+    <string name="tutor">Обучение</string>
+    <string name="title_activity_tuner">TunerActivity</string>
+    <string name="main_menu">Главное меню</string>
+    <string name="file">Файл</string>
+    <string name="title_activity_editor">EditorActivity</string>
+    <string name="a5">C2</string>
+    <string name="file_name">file_name</string>
+    <string name="bpm">120bpm</string>
+    <string name="choose_instrument">Инструмент</string>
+    <string name="open_file">Открыть файл</string>
+    <string name="to_editor">Редактор</string>
+    <string name="to_tutor">Обучение</string>
+    <string name="title_activity_tutor">TutorActivity</string>
+    <string name="imageButtonPlayContentDescription">Play</string>
+    <string name="imageButtonLeftContentDescription">Left</string>
+    <string name="imageButtonRightContentDescription">Right</string>
+    <string name="imageButtonUpContentDescription">Up</string>
+    <string name="imageButtonOneContentDescription">One</string>
+    <string name="imageButtonTwoContentDescription">Two</string>
+    <string name="imageButtonFourContentDescription">Four</string>
+    <string name="imageButtonEightContentDescription">Eight</string>
+    <string name="imageButtonSixteenContentDescription">Sixteen</string>
+    <string name="imageButtonDownContentDescription">Up</string>
+    <string name="imageButtonPOneContentDescription">One</string>
+    <string name="imageButtonPTwoContentDescription">Two</string>
+    <string name="imageButtonPFourContentDescription">Four</string>
+    <string name="imageButtonPEightContentDescription">Eight</string>
+    <string name="imageButtonPSixteenContentDescription">Sixteen</string>
+    <string name="imageButtonBekarContentDescription">Bekar</string>
+    <string name="imageButtonDoteContentDescription">Dote</string>
+    <string name="imageButtonDiezContentDescription">Diez</string>
+    <string name="imageButtonBemolContentDescription">Bemol</string>
+    <string name="imageButtonNewContentDescription">New</string>
+    <string name="imageButtonOpenContentDescription">Open</string>
+    <string name="imageButtonSaveContentDescription">Save</string>
+    <string name="radio_edit">Редактировать</string>
+    <string name="radio_paste">Вставить</string>
+    <string name="imageButtonDelNoteContentDescription">DelNote</string>
+    <string name="imageButtonDelSignContentDescription">DelSign</string>
+    <string name="imageButtonUndoContentDescription">Undo</string>
+    <string name="imageButtonRedoContentDescription">Redo</string>
+    <string name="imageButtonPlusZatactContentDescription">PlusZatact</string>
+    <string name="imageButtonMinusZatactContentDescription">MinusZatact</string>
+    <string name="imageButtonSize6_8ContentDescription">Size6_8</string>
+    <string name="imageButtonSize2_2ContentDescription">Size2_2</string>
+    <string name="imageButtonSize2_4ContentDescription">Size2_4</string>
+    <string name="imageButtonSize2_8ContentDescription">Size2_8</string>
+    <string name="imageButtonSize3_2ContentDescription">Size3_2</string>
+    
+    <string name="imageButtonSize3_4ContentDescription">Size3_4</string>
+    <string name="imageButtonSize3_8ContentDescription">Size3_8</string>
+    <string name="imageButtonSize4_2ContentDescription">Size4_2</string>
+    <string name="imageButtonSize4_4ContentDescription">Size4_4</string>
+    <string name="imageButtonSize6_4ContentDescription">Size6_4</string>
+
+</resources>

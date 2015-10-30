@@ -1,0 +1,558 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/negative_margin_20"
+    android:layout_marginRight="@dimen/negative_margin_20"
+    android:layout_marginTop="@dimen/negative_margin_20"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
+    tools:context=".EditorActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1" >
+        
+        <ImageButton
+            android:id="@+id/imageButtonNew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:src="@drawable/new1" 
+            android:onClick="newClick"
+            android:contentDescription="@string/imageButtonNewContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonOpen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:src="@drawable/open" 
+            android:onClick="openClick"
+            android:contentDescription="@string/imageButtonOpenContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:onClick="saveClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:src="@drawable/save" 
+            
+            android:contentDescription="@string/imageButtonSaveContentDescription" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:layout_weight="0.125"
+            android:layout_span = "2" 
+            android:onClick="tutorClick"
+            android:text="@string/to_tutor" />
+
+        <Button
+            android:id="@+id/butMainMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:layout_weight="0.125"
+            android:layout_span = "2" 
+            android:text="@string/main_menu" 
+            android:onClick="mainMenuClick" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:onClick="playClick"
+            android:src="@drawable/play" 
+            android:contentDescription="@string/imageButtonPlayContentDescription" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1" >
+
+        <TextView
+            android:id="@+id/textBpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:gravity="right"
+            android:text="@string/bpm" 
+            android:layout_span = "4" />
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="0.5"
+            android:gravity="left"
+            android:text="@string/file_name" 
+            android:layout_span = "4" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:weightSum="1" >
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="8" 
+            android:layout_weight="1" >
+
+           <ori.fluteapp.FileDrawPanel
+                android:id="@+id/fileDrawPanel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                
+                />
+
+        </HorizontalScrollView>
+
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:weightSum="1" >
+        
+        <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_span="8" 
+        android:weightSum="1" 
+        android:orientation="horizontal" >
+           
+	       <RadioButton
+	            android:id="@+id/rad_edit"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="24dp"
+	            android:layout_gravity="left"
+	            />
+	        
+	        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"   
+            android:layout_gravity="left|center_vertical"     
+            
+            android:text="@string/radio_edit" />
+	
+	        <RadioButton
+	            android:id="@+id/rad_paste"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="left"
+	            android:layout_marginLeft="24dp"
+	            />
+	        
+	        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"       
+            android:layout_gravity="right|center_vertical" 
+            android:text="@string/radio_paste" />
+        
+        </RadioGroup>
+       
+     </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:weightSum="1" >
+        
+        <ImageButton
+            android:id="@+id/imageButtonUp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/up" 
+            android:onClick="updownClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonUpContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonOne"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/one" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonOneContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/two" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonTwoContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonFour"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/four" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonFourContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonEight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/eight" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonEightContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSixteen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/sixteen" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSixteenContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonDiez"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/diez" 
+            android:onClick="addSignClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonDiezContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonBemol"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/bemol" 
+            android:onClick="addSignClick"
+            android:contentDescription="@string/imageButtonBemolContentDescription" />
+
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:weightSum="1" >
+        
+        <ImageButton
+            android:id="@+id/imageButtonDown"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/down" 
+            android:onClick="updownClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonDownContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonPOne"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/p1" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonPOneContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonPTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/p2" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonPTwoContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonPFour"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/p4" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonPFourContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonPEight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/p8" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonPEightContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonPSixteen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/p16" 
+            android:onClick="chNoteClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonPSixteenContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonBekar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/bekar" 
+            android:onClick="addSignClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonBekarContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonDote"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/dote" 
+            android:onClick="addSignClick"
+            android:contentDescription="@string/imageButtonDoteContentDescription" />
+
+    </TableRow>
+    
+        <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:weightSum="1" >
+        
+        <ImageButton
+	            android:id="@+id/imageButtonDelNote"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.125"
+	            android:layout_marginRight="@dimen/negative_margin_10"
+	            android:contentDescription="@string/imageButtonDelNoteContentDescription"
+	            android:src="@drawable/del" 
+	            android:onClick="delNoteClick" />
+        
+        <ImageButton
+	            android:id="@+id/imageButtonPlusZatact"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.125"
+	            android:layout_marginRight="@dimen/negative_margin_10"
+				android:contentDescription="@string/imageButtonPlusZatactContentDescription"
+	            android:src="@drawable/pzatact" 
+	            android:onClick="zatactClick" />
+        
+        <ImageButton
+	            android:id="@+id/imageButtonUndo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.125"
+	            android:onClick="undoClick"
+	            android:layout_marginRight="@dimen/negative_margin_10"
+				android:contentDescription="@string/imageButtonUndoContentDescription"
+	            android:src="@drawable/undo" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize6_8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size6_8" 
+            android:onClick="chSizeClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSize6_8ContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size2_2" 
+            android:onClick="chSizeClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSize2_2ContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize2_4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size2_4" 
+            android:onClick="chSizeClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSize2_4ContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize2_8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size2_8" 
+            android:onClick="chSizeClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSize2_8ContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize3_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size3_2" 
+            android:onClick="chSizeClick"
+            android:contentDescription="@string/imageButtonSize3_2ContentDescription" />
+
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:weightSum="1" >
+        
+        <ImageButton
+	            android:id="@+id/imageButtonDelSign"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:contentDescription="@string/imageButtonDelSignContentDescription"
+	            android:layout_weight="0.125"
+	            android:layout_marginRight="@dimen/negative_margin_10"
+	            android:src="@drawable/delsign" 
+	            android:onClick="delSignClick" />
+        
+        <ImageButton
+	            android:id="@+id/imageButtonMinusZatact"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.125"
+	            android:layout_marginRight="@dimen/negative_margin_10"
+				android:contentDescription="@string/imageButtonMinusZatactContentDescription"
+	            android:src="@drawable/mzatact" 
+	            android:onClick="zatactClick" />
+        
+        <ImageButton
+	            android:id="@+id/imageButtonRedo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.125"
+	            android:onClick="redoClick"
+	            android:layout_marginRight="@dimen/negative_margin_10"
+				android:contentDescription="@string/imageButtonRedoContentDescription"
+	            android:src="@drawable/redo" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize3_4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size3_4" 
+            android:onClick="chSizeClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSize3_4ContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize3_8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size3_8" 
+            android:onClick="chSizeClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSize3_8ContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize4_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size4_2" 
+            android:onClick="chSizeClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSize4_2ContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize4_4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size4_4" 
+            android:onClick="chSizeClick"
+            android:layout_marginRight="@dimen/negative_margin_10"
+            android:contentDescription="@string/imageButtonSize4_4ContentDescription" />
+        
+        <ImageButton
+            android:id="@+id/imageButtonSize6_4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.125"
+            android:src="@drawable/size6_4" 
+            android:onClick="chSizeClick"
+            android:contentDescription="@string/imageButtonSize6_4ContentDescription" />
+
+    </TableRow>
+    
+        <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:weightSum="1" >
+        
+	        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"   
+            android:layout_gravity="center_vertical"     
+            android:layout_weight="1"
+            android:max="210"
+             />
+
+     </TableRow>
+
+</TableLayout>
