@@ -29,7 +29,15 @@
             android:onClick="mainMenuClick"
             android:text="@string/main_menu" />
 
-        <TextView
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:weightSum="1" >
+    <TextView
             android:id="@+id/noteText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,9 +48,9 @@
             android:text="@string/a5"
             android:textSize="@dimen/text_size" />
     </TableRow>
-
+    
     <TableRow
-        android:id="@+id/tableRow2"
+        android:id="@+id/tableRow3"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="0.5"
